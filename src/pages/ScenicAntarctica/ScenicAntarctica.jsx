@@ -1,21 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, Check, Map, Ship, Shield, Wine, Snowflake, PawPrint, Waves, Info, CheckCircle, Award, Globe, Star, Crown, ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import "../ScenicAntarctica/ScenicAntarctica.css";
-import myImage from "../../assets/image.jpg";
-import SecondPage1 from "../../assets/SecondPage/SecondPage1.jpg";
-import SecondPage2 from "../../assets/SecondPage/SecondPage2.jpg";
-import SecondPage3 from "../../assets/SecondPage/SecondPage3.jpg";
-import SecondPage4 from "../../assets/SecondPage/SecondPage4.jpg";
-import SecondPage5 from "../../assets/SecondPage/SecondPage5.jpg";
-import SecondPage6 from "../../assets/SecondPage/SecondPage6.jpg";
-import SecondPage7 from "../../assets/SecondPage/SecondPage7.jpg";
-import SecondPage8 from "../../assets/SecondPage/SecondPage8.jpg";
-import SecondPage9 from "../../assets/SecondPage/SecondPage9.jpg";
-import SecondPage10 from "../../assets/SecondPage/SecondPage10.jpg";
+import myImage from "../../assets/image.webp";
+import SecondPage1 from "../../assets/SecondPage/SecondPage1.webp";
+import SecondPage2 from "../../assets/SecondPage/SecondPage2.webp";
+import SecondPage3 from "../../assets/SecondPage/SecondPage3.webp";
+import SecondPage4 from "../../assets/SecondPage/SecondPage4.webp";
+import SecondPage5 from "../../assets/SecondPage/SecondPage5.webp";
+import SecondPage6 from "../../assets/SecondPage/SecondPage6.webp";
+import SecondPage7 from "../../assets/SecondPage/SecondPage7.webp";
+import SecondPage8 from "../../assets/SecondPage/SecondPage8.webp";
+import SecondPage9 from "../../assets/SecondPage/SecondPage9.webp";
+import SecondPage10 from "../../assets/SecondPage/SecondPage10.webp";
 
 function ScenicAntarctica() {
   const [current, setCurrent] = useState(0);
@@ -101,9 +101,9 @@ function ScenicAntarctica() {
       {/* HERO */}
       <section className="Scenic_hero_section">
         <div
-          className="Scenic_hero_bg"
-          style={{ backgroundImage: `url(${images[current]})` }}
-        ></div>
+        className="Scenic_hero_bg"
+        style={{ backgroundImage: `url(${images[current]})` }}
+      ></div>
 
         <div className="Scenic_hero_overlay"></div>
 
@@ -301,15 +301,15 @@ function ScenicAntarctica() {
 
             <ul className="Scenic_styled_list">
               <li>
-                <i className="fas fa-check"></i> The Drake Passage crossing,
+                <Check size={16} strokeWidth={2} /> The Drake Passage crossing,
                 which can vary in conditions
               </li>
               <li>
-                <i className="fas fa-check"></i> Zodiac transfers and uneven
+                <Check size={16} strokeWidth={2} /> Zodiac transfers and uneven
                 terrain during landings
               </li>
               <li>
-                <i className="fas fa-check"></i> Weather-driven itinerary
+                <Check size={16} strokeWidth={2} /> Weather-driven itinerary
                 adjustments
               </li>
             </ul>
@@ -366,19 +366,19 @@ function ScenicAntarctica() {
 
           <div className="Scenic_investment_factors">
             <div className="Scenic_factor_card">
-              <i className="fas fa-map-marked-alt"></i>
+              <Map size={24} strokeWidth={1.5} />
               <h4>Restricted Access</h4>
             </div>
             <div className="Scenic_factor_card">
-              <i className="fas fa-ship"></i>
+              <Ship size={24} strokeWidth={1.5} />
               <h4>Limited Capacity</h4>
             </div>
             <div className="Scenic_factor_card">
-              <i className="fas fa-shield-alt"></i>
+              <Shield size={24} strokeWidth={1.5} />
               <h4>Safety Standards</h4>
             </div>
             <div className="Scenic_factor_card">
-              <i className="fas fa-glass-cheers"></i>
+              <Wine size={24} strokeWidth={1.5} />
               <h4>All-Inclusive</h4>
             </div>
           </div>
@@ -405,7 +405,7 @@ function ScenicAntarctica() {
           <div className="Scenic_season_cards">
             <div className="Scenic_season_card Scenic_season_card--early">
               <div className="Scenic_season_icon">
-                <i className="fas fa-snowflake"></i>
+                <Snowflake size={24} strokeWidth={1.5} />
               </div>
               {/* <div className="Scenic_season_label">November – Early December</div> */}
               <h4>Early Season</h4>
@@ -417,7 +417,7 @@ function ScenicAntarctica() {
 
             <div className="Scenic_season_card Scenic_season_card--mid">
               <div className="Scenic_season_icon">
-                <i className="fas fa-paw"></i>
+                <PawPrint size={24} strokeWidth={1.5} />
               </div>
               {/* <div className="Scenic_season_label">Late December – January</div> */}
               <h4>Mid Season</h4>
@@ -429,7 +429,7 @@ function ScenicAntarctica() {
 
             <div className="Scenic_season_card Scenic_season_card--late">
               <div className="Scenic_season_icon">
-                <i className="fas fa-water"></i>
+                <Waves size={24} strokeWidth={1.5} />
               </div>
               {/* <div className="Scenic_season_label">February – March</div> */}
               <h4>Late Season</h4>
@@ -441,7 +441,7 @@ function ScenicAntarctica() {
           </div>
 
           <div className="Scenic_season_footer">
-            <i className="fas fa-info-circle"></i>
+            <Info size={16} strokeWidth={1.5} />
             <p>
               The best timing depends entirely on your personal priorities. All
               months offer exceptional expedition conditions.
@@ -486,22 +486,10 @@ function ScenicAntarctica() {
               </div>
 
               <ul className="Scenic_styled_list Scenic_team_points_styled">
-                <li>
-                  <i className="fas fa-check-circle"></i> Strategic positioning
-                  across expedition inventory
-                </li>
-                <li>
-                  <i className="fas fa-check-circle"></i> Access to preferred
-                  availability and timing
-                </li>
-                <li>
-                  <i className="fas fa-check-circle"></i> Full itinerary
-                  coordination
-                </li>
-                <li>
-                  <i className="fas fa-check-circle"></i> Ongoing support
-                  throughout the journey
-                </li>
+                <li><CheckCircle size={16} strokeWidth={1.5} /> Strategic positioning across expedition inventory</li>
+                <li><CheckCircle size={16} strokeWidth={1.5} /> Access to preferred availability and timing</li>
+                <li><CheckCircle size={16} strokeWidth={1.5} /> Full itinerary coordination</li>
+                <li><CheckCircle size={16} strokeWidth={1.5} /> Ongoing support throughout the journey</li>
               </ul>
 
               <div className="Scenic_curated_card">
@@ -516,19 +504,19 @@ function ScenicAntarctica() {
 
                 <div className="Scenic_curated_badges">
                   <div className="Scenic_curated_badge_item">
-                    <i className="fas fa-award"></i>
+                    <Award size={18} strokeWidth={1.5} />
                     <span>40+ years of expertise</span>
                   </div>
                   <div className="Scenic_curated_badge_item">
-                    <i className="fas fa-globe-americas"></i>
+                    <Globe size={18} strokeWidth={1.5} />
                     <span>121 countries traveled</span>
                   </div>
                   <div className="Scenic_curated_badge_item">
-                    <i className="fas fa-star"></i>
+                    <Star size={18} strokeWidth={1.5} />
                     <span>Luxury Travel Influencer of the Year</span>
                   </div>
                   <div className="Scenic_curated_badge_item">
-                    <i className="fas fa-crown"></i>
+                    <Crown size={18} strokeWidth={1.5} />
                     <span>Most Influential Women in Travel (2026)</span>
                   </div>
                 </div>
@@ -559,6 +547,8 @@ function ScenicAntarctica() {
                   src={myImage}
                   alt="Angela Hughes - Luxury Travel Advisor"
                   className="Scenic_insight_expert_image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -580,7 +570,7 @@ function ScenicAntarctica() {
                 )
               }
             >
-              <i className="fas fa-chevron-left"></i>
+              <ChevronLeft size={20} strokeWidth={2} />
             </button>
 
             <button
@@ -589,7 +579,7 @@ function ScenicAntarctica() {
                 setGalleryCurrent((prev) => (prev + 1) % galleryImages.length)
               }
             >
-              <i className="fas fa-chevron-right"></i>
+              <ChevronRight size={20} strokeWidth={2} />
             </button>
 
             {/* IMAGES */}

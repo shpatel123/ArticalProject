@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import "../AntarcticaCruise/AntarcticaCruise.css";
-import myImage from "../../assets/image.jpg";
-import { Award, Globe, Shield, Star } from "lucide-react";
-import anta1 from "../../assets/antarctica-cruise-cost/anta1.jpg";
-import anta2 from "../../assets/antarctica-cruise-cost/anta2.jpg";
-import anta3 from "../../assets/antarctica-cruise-cost/anta3.jpg";
-import anta5 from "../../assets/antarctica-cruise-cost/anta5.jpg";
+import myImage from "../../assets/image.webp";
+import { Award, Globe, Shield, Star, Anchor, Compass, Gem, Info, Ship, Plane, Hotel, Bed, Calendar, Snowflake } from "lucide-react";
+import anta1 from "../../assets/antarctica-cruise-cost/anta1.webp";
+import anta2 from "../../assets/antarctica-cruise-cost/anta2.webp";
+import anta3 from "../../assets/antarctica-cruise-cost/anta3.webp";
+import anta5 from "../../assets/antarctica-cruise-cost/anta5.webp";
 
 const AntarcticaCostPage = () => {
   const [current, setCurrent] = useState(0);
@@ -276,27 +276,21 @@ const AntarcticaCostPage = () => {
 
           <div className="anta_tier_cards">
             <div className="anta_tier_card anta_tier_card--entry">
-              <div className="anta_tier_icon">
-                <i className="fas fa-anchor"></i>
-              </div>
+              <div className="anta_tier_icon"><Anchor size={22} strokeWidth={1.5} /></div>
               <div className="anta_tier_label">Entry Expedition</div>
               <div className="anta_tier_price"> $8,000 – $15,000</div>
               <div className="anta_tier_sub">per person</div>
             </div>
 
             <div className="anta_tier_card anta_tier_card--premium">
-              <div className="anta_tier_icon">
-                <i className="fas fa-compass"></i>
-              </div>
+              <div className="anta_tier_icon"><Compass size={22} strokeWidth={1.5} /></div>
               <div className="anta_tier_label">Premium Expedition</div>
               <div className="anta_tier_price">$15,000 – $25,000</div>
               <div className="anta_tier_sub">per person</div>
             </div>
 
             <div className="anta_tier_card anta_tier_card--luxury">
-              <div className="anta_tier_icon">
-                <i className="fas fa-gem"></i>
-              </div>
+              <div className="anta_tier_icon"><Gem size={22} strokeWidth={1.5} /></div>
               <div className="anta_tier_label">Ultra-Luxury Expedition</div>
               <div className="anta_tier_price">$25,000 – $50,000+</div>
               <div className="anta_tier_sub">per person</div>
@@ -304,7 +298,7 @@ const AntarcticaCostPage = () => {
           </div>
 
           <div className="anta_overview_note">
-            <i className="fas fa-info-circle"></i>
+            <Info size={16} strokeWidth={1.5} />
             <p>
               Most clients planning Antarctica with our team fall within the
               <strong> $20,000 to $40,000</strong> range, where the experience
@@ -516,6 +510,8 @@ const AntarcticaCostPage = () => {
             <img
               src={myImage}
               alt="Luxury Antarctica Expedition with Angela Hughes"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -549,36 +545,25 @@ const AntarcticaCostPage = () => {
 
           <div className="anta_total_grid">
             <div className="anta_total_card">
-              <div className="anta_total_icon">
-                <i className="fas fa-ship"></i>
-              </div>
+              <div className="anta_total_icon"><Ship size={22} strokeWidth={1.5} /></div>
               <h3>Cruise</h3>
               <div className="anta_total_price">$15,000 – $50,000+</div>
               <p>Per Person</p>
             </div>
-
             <div className="anta_total_card">
-              <div className="anta_total_icon">
-                <i className="fas fa-plane"></i>
-              </div>
+              <div className="anta_total_icon"><Plane size={22} strokeWidth={1.5} /></div>
               <h3>Flights</h3>
               <div className="anta_total_price">$1,500 – $6,000+</div>
               <p>Main Cabin to Biz</p>
             </div>
-
             <div className="anta_total_card">
-              <div className="anta_total_icon">
-                <i className="fas fa-hotel"></i>
-              </div>
+              <div className="anta_total_icon"><Hotel size={22} strokeWidth={1.5} /></div>
               <h3>Hotels and transfers</h3>
               <div className="anta_total_price">$500 – $2,000</div>
               <p>Average Stay</p>
             </div>
-
             <div className="anta_total_card">
-              <div className="anta_total_icon">
-                <i className="fas fa-shield-alt"></i>
-              </div>
+              <div className="anta_total_icon"><Shield size={22} strokeWidth={1.5} /></div>
               <h3>Travel insurance</h3>
               <div className="anta_total_price">$500 – $2,500</div>
               <p>Essential Prep</p>
@@ -592,7 +577,7 @@ const AntarcticaCostPage = () => {
               <p>Per Person — Door-to-Door Experience</p>
             </div>
             <div className="anta_summary_cta">
-              <i className="fas fa-info-circle"></i>
+              <Info size={16} strokeWidth={1.5} />
               <span>
                 Reflects the full cost of executing the journey with premium
                 standards.
@@ -608,36 +593,11 @@ const AntarcticaCostPage = () => {
           <h2>What Impacts Your Antarctica Cost Most</h2>
 
           <div className="anta_expert_cards">
-            <div className="anta_expert_card">
-              <div className="anta_icon_box">
-                <i className="fas fa-bed"></i>
-              </div>
-              <p>Suite category</p>
-            </div>
-            <div className="anta_expert_card">
-              <div className="anta_icon_box">
-                <i className="fas fa-calendar-alt"></i>
-              </div>
-              <p>Length of itinerary</p>
-            </div>
-            <div className="anta_expert_card">
-              <div className="anta_icon_box">
-                <i className="fas fa-snowflake"></i>
-              </div>
-              <p>Travel month</p>
-            </div>
-            <div className="anta_expert_card">
-              <div className="anta_icon_box">
-                <i className="fas fa-ship"></i>
-              </div>
-              <p>Expedition brand</p>
-            </div>
-            <div className="anta_expert_card">
-              <div className="anta_icon_box">
-                <i className="fas fa-plane"></i>
-              </div>
-              <p>Air and pre/post arrangements</p>
-            </div>
+            <div className="anta_expert_card"><div className="anta_icon_box"><Bed size={18} strokeWidth={1.5} /></div><p>Suite category</p></div>
+            <div className="anta_expert_card"><div className="anta_icon_box"><Calendar size={18} strokeWidth={1.5} /></div><p>Length of itinerary</p></div>
+            <div className="anta_expert_card"><div className="anta_icon_box"><Snowflake size={18} strokeWidth={1.5} /></div><p>Travel month</p></div>
+            <div className="anta_expert_card"><div className="anta_icon_box"><Ship size={18} strokeWidth={1.5} /></div><p>Expedition brand</p></div>
+            <div className="anta_expert_card"><div className="anta_icon_box"><Plane size={18} strokeWidth={1.5} /></div><p>Air and pre/post arrangements</p></div>
           </div>
 
           <p>
@@ -755,7 +715,7 @@ const AntarcticaCostPage = () => {
 
             {/* IMAGE (RIGHT) */}
             <div className="anta_why_image">
-              <img src={anta5} alt="Antarctic Expedition Logistics" />
+              <img src={anta5} alt="Antarctic Expedition Logistics" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -786,6 +746,7 @@ const AntarcticaCostPage = () => {
               loop
               playsInline
               controls
+              preload="none"
               className="anta_showcase_video"
             >
               Your browser does not support the video tag.
