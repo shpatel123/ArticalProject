@@ -45,7 +45,35 @@
   z-index: 1;
 }
 
+.senianta-readmore-wrapper{
+    display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 
+.senianta-readmore-btn{
+    background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.senianta-readmore-btn::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: 0.3s;
+}
+
+.senianta-readmore-btn:hover::after {
+  width: 100%;
+}
 
 .senianta-hero-content {
   max-width: 990px;
@@ -209,6 +237,7 @@
     text-align: center;
     padding: 12px 0;
   }
+
 }
 
 @media (max-width: 768px) {
