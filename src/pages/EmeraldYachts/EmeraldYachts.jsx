@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import Navbar from "../../components/Navbar/Navbar";
-import { Award, Globe, Newspaper, Quote, Star, Check, X } from "lucide-react";
-import myImage from "../../assets/image.jpg";
+import { Route, Navigation, Sun, Clock, Ship, Plane, Quote } from "lucide-react";
+import myImage from "../../assets/image.webp";
 import "./EmeraldYachts.css";
-import HomePage1 from "../../assets/HomePage/HomePage1.jpg";
-import HomePage3 from "../../assets/HomePage/HomePage3.jpg";
-import HomePage4 from "../../assets/HomePage/HomePage4.jpg";
-import HomePage2 from "../../assets/HomePage/HomePage2.jpg";
+import HomePage1 from "../../assets/HomePage/HomePage1.webp";
+import HomePage3 from "../../assets/HomePage/HomePage3.webp";
+import HomePage4 from "../../assets/HomePage/HomePage4.webp";
+import HomePage2 from "../../assets/HomePage/HomePage2.webp";
 
 const LuxuryPage = () => {
   const [current, setCurrent] = useState(0);
@@ -115,8 +115,17 @@ const LuxuryPage = () => {
             <div
               key={i}
               className={`Emerald_hero_bg ${i === current ? "active" : ""}`}
-              style={{ backgroundImage: `url(${img})` }}
-            ></div>
+            >
+              <img
+                src={img}
+                alt=""
+                aria-hidden="true"
+                className="Emerald_hero_bg_img"
+                fetchpriority={i === 0 ? "high" : "low"}
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding={i === 0 ? "sync" : "async"}
+              />
+            </div>
           ))}
         </div>
 
@@ -220,7 +229,14 @@ const LuxuryPage = () => {
 
             {/* RIGHT IMAGE */}
             <div className="Emerald_experience_image">
-              <img src={HomePage2} alt="Yacht Experience" />
+              <img
+                src={HomePage2}
+                alt="Yacht Experience"
+                loading="lazy"
+                decoding="async"
+                width="550"
+                height="400"
+              />
             </div>
           </div>
         </div>
@@ -386,27 +402,27 @@ const LuxuryPage = () => {
 
           <div className="Emerald_expert_cards">
             <div className="Emerald_expert_card">
-              <i className="fas fa-route"></i>
+              <Route size={28} strokeWidth={1.5} />
               <p>Itinerary structure</p>
             </div>
 
             <div className="Emerald_expert_card">
-              <i className="fas fa-sun"></i>
+              <Sun size={28} strokeWidth={1.5} />
               <p>Seasonality</p>
             </div>
 
             <div className="Emerald_expert_card">
-              <i className="fas fa-clock"></i>
+              <Clock size={28} strokeWidth={1.5} />
               <p>Time in port versus sea</p>
             </div>
 
             <div className="Emerald_expert_card">
-              <i className="fas fa-ship"></i>
+              <Ship size={28} strokeWidth={1.5} />
               <p>Ship atmosphere</p>
             </div>
 
             <div className="Emerald_expert_card">
-              <i className="fas fa-plane"></i>
+              <Plane size={28} strokeWidth={1.5} />
               <p>Travel logistics</p>
             </div>
           </div>

@@ -1,31 +1,45 @@
-import React from 'react'
-import EmeraldYachts from '../src/pages/EmeraldYachts/EmeraldYachts'
-import DrakePassagePage from '../src/pages/DrakePassagePage/DrakePassagePage'
-import ScenicVSSilversea from '../src/pages/ScenicVSSilversea/ScenicVSSilversea'
-import AntarcticaCruise from '../src/pages/AntarcticaCruise/AntarcticaCruise'
-import ScenicAntarctica from '../src/pages/ScenicAntarctica/ScenicAntarctica'
-import ScenicvsEmeraldYachts from '../src/pages/ScenicvsEmeraldYachts/ScenicvsEmeraldYachts'
-import { BrowserRouter } from 'react-router-dom'
-import { Routes } from 'react-router-dom'
-import { Route } from 'react-router-dom'
-import LuxuryTravel from './pages/LuxuryTravel/LuxuryTravel'
-import Navbar from './components/Navbar/Navbar'
+import React, { lazy, Suspense } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// Code-split each page — only the visited page's JS is downloaded
+const EmeraldYachts         = lazy(() => import('./pages/EmeraldYachts/EmeraldYachts'))
+const DrakePassagePage      = lazy(() => import('./pages/DrakePassagePage/DrakePassagePage'))
+const ScenicVSSilversea     = lazy(() => import('./pages/ScenicVSSilversea/ScenicVSSilversea'))
+const AntarcticaCruise      = lazy(() => import('./pages/AntarcticaCruise/AntarcticaCruise'))
+const ScenicAntarctica      = lazy(() => import('./pages/ScenicAntarctica/ScenicAntarctica'))
+const ScenicvsEmeraldYachts = lazy(() => import('./pages/ScenicvsEmeraldYachts/ScenicvsEmeraldYachts'))
+const LuxuryTravel          = lazy(() => import('./pages/LuxuryTravel/LuxuryTravel'))
+
+const PageLoader = () => (
+  <div style={{
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#f7f9fb',
+    fontFamily: 'Montserrat, sans-serif',
+    color: '#274472',
+    fontSize: '16px'
+  }}>
+    Loading…
+  </div>
+)
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Suspense fallback={<PageLoader />}>
         <Routes>
-          <Route path='/' element={<EmeraldYachts />}></Route>
-          <Route path='/DrakePassagePage' element={<DrakePassagePage />}></Route>
-          <Route path='/scenic-vs-silversea-antarctica' element={<ScenicVSSilversea />}></Route>
-          <Route path='/antarctica-cruise-cost' element={<AntarcticaCruise />}></Route>
-          <Route path='/scenic-antarctica-cruise' element={<ScenicAntarctica />}></Route>
-          <Route path='/luxury-travel' element={<LuxuryTravel />}></Route>
-          <Route path='/ScenicvsEmeraldYachts' element={<ScenicvsEmeraldYachts />}></Route>
+          <Route path='/' element={<EmeraldYachts />} />
+          <Route path='/DrakePassagePage' element={<DrakePassagePage />} />
+          <Route path='/scenic-vs-silversea-antarctica' element={<ScenicVSSilversea />} />
+          <Route path='/antarctica-cruise-cost' element={<AntarcticaCruise />} />
+          <Route path='/scenic-antarctica-cruise' element={<ScenicAntarctica />} />
+          <Route path='/luxury-travel' element={<LuxuryTravel />} />
+          <Route path='/ScenicvsEmeraldYachts' element={<ScenicvsEmeraldYachts />} />
         </Routes>
-      </BrowserRouter>
-    </>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 

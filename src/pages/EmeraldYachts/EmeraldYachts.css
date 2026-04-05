@@ -21,11 +21,19 @@
 .Emerald_hero_bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
   opacity: 0;
   transition: opacity 1.4s ease-in-out;
   transform: scale(1);
+  overflow: hidden;
+}
+
+/* Full-cover image inside every slide */
+.Emerald_hero_bg_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* ACTIVE SLIDE — smoothly fades in */
@@ -1017,22 +1025,12 @@
   transition: all 0.3s ease;
 }
 
-/* ICON BOX 🔥 */
-.Emerald_icon_box {
-  width: 42px;
-  height: 42px;
-  background: #eef2f5;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ICON */
-.Emerald_icon_box i {
-  font-size: 16px;
+/* Lucide SVG icon inside card */
+.Emerald_expert_card svg {
   color: #2f4a6d;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
 }
 
 /* TEXT */
@@ -1043,7 +1041,7 @@
   font-weight: 500;
 }
 
-/* HOVER EFFECT 🔥 */
+/* HOVER EFFECT */
 .Emerald_expert_card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
