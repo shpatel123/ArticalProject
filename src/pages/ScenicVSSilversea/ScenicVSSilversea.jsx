@@ -17,10 +17,10 @@ import {
 } from "lucide-react";
 import Navbar from "../../components/Navbar/Navbar";
 import "../ScenicVSSilversea/ScenicVSSilversea.css";
-import scenisilver5 from "../../assets/scenic-vs-silversea-antarctica/scenisilver5.jpg";
-import scenisilver1 from "../../assets/scenic-vs-silversea-antarctica/scenisilver1.jpeg";
-import scenisilver2 from "../../assets/scenic-vs-silversea-antarctica/scenisilver2.jpeg";
-import scenisilver3 from "../../assets/scenic-vs-silversea-antarctica/scenisilver3.jpg";
+import scenisilver5 from "../../assets/scenic-vs-silversea-antarctica/scenisilver5.webp";
+import scenisilver1 from "../../assets/scenic-vs-silversea-antarctica/scenisilver1.webp";
+import scenisilver2 from "../../assets/scenic-vs-silversea-antarctica/scenisilver2.webp";
+import scenisilver3 from "../../assets/scenic-vs-silversea-antarctica/scenisilver3.webp";
 import { Helmet } from "react-helmet";
 
 const AntarcticaPage = () => {
@@ -322,34 +322,31 @@ const AntarcticaPage = () => {
       </Helmet>
       <Navbar />
 
-      <section className="anta_hero_section">
-        <div
-          className="anta_hero_bg"
-          style={{ backgroundImage: `url(${images[current]})` }}
-        ></div>
-
-        <div className="anta_hero_overlay"></div>
-
-        <div className="anta_hero_content">
+      <section
+        className="senianta-hero senianta-antarctica-senianta-hero"
+        style={{ backgroundImage: `url(${images[current]})` }}
+      >
+        <div className="senianta-hero-content">
           <h1>Scenic vs Silversea Antarctica</h1>
 
-          <p className="anta_hero_p">
-            Choosing the right luxury senianta-expedition experience
+          <p className="senianta-lead">
+            Choosing the right luxury expedition experience
           </p>
 
-          <p>
+          <p className="senianta-extra-text">
             The difference is not simply in features. It is in how you want to
             experience the journey.
           </p>
-          <p>
-            Choosing the right senianta-expedition cruise line for Antarctica
-            impacts more than your itinerary. It shapes how you experience the
+          <p className="senianta-extra-text">
+            Choosing the right expedition cruise line for Antarctica impacts
+            more than your itinerary. It shapes how you experience the
             destination from start to finish.
           </p>
 
           {readMore && (
             <>
-              <p>
+              <p className="senianta-extra-text">
+                <br />
                 Two of the most commonly compared options are Scenic Luxury
                 Cruises &amp; Tours and Silversea Cruises. Both operate at the
                 highest level of the market. Both provide access to Antarctica.
@@ -357,9 +354,9 @@ const AntarcticaPage = () => {
             </>
           )}
 
-          <div className="anta_readmore_wrapper">
+          <div className="senianta-readmore-wrapper">
             <button
-              className="anta_readmore_btn"
+              className="senianta-readmore-btn"
               onClick={() => setReadMore(!readMore)}
             >
               {readMore ? "Read Less" : "Read More"}
