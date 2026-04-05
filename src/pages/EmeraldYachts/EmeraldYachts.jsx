@@ -111,11 +111,13 @@ const LuxuryPage = () => {
       <section className="Emerald_hero_section">
         {/* BACKGROUND WRAPPER */}
         <div className="Emerald_hero_bg_wrapper">
-          <div
-            key={current}
-            className="Emerald_hero_bg fade"
-            style={{ backgroundImage: `url(${images[current]})` }}
-          ></div>
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className={`Emerald_hero_bg ${i === current ? "active" : ""}`}
+              style={{ backgroundImage: `url(${img})` }}
+            ></div>
+          ))}
         </div>
 
         {/* OVERLAY */}
@@ -199,29 +201,6 @@ const LuxuryPage = () => {
           </p>
         </div>
       </section>
-
-      {/* <section>
-  <div>
-    <h2>
-         Real Experience with Emerald Yachts
-    </h2>
-    <p>
-        Our experience with Emerald Yachts is not theoretical. We understand how these journeys unfold in real time, how itinerary pacing impacts the feel of the trip, and how small decisions such as sailing selection and cabin placement influence the overall experience.
-    </p>
-  </div>
-</section> */}
-
-      {/* <section className="experience_section">
-  <div className="experience_inner">
-    <h2>
-      Real Experience with Emerald Yachts
-    </h2>
-
-    <p>
-      Our experience with Emerald Yachts is not theoretical. We understand how these journeys unfold in real time, how itinerary pacing impacts the feel of the trip, and how small decisions such as sailing selection and cabin placement influence the overall experience.
-    </p>
-  </div>
-</section> */}
 
       <section className="Emerald_experience_section">
         <div className="Emerald_experience_inner">
@@ -345,33 +324,6 @@ const LuxuryPage = () => {
               </div>
             ))}
           </div>
-
-          {/* INDUSTRY RECOGNITION (Minimalist Cards) */}
-          {/* <div className="Emerald_awards_row">
-      <div className="Emerald_award_card">
-        <Award className="Emerald_award_icon" />
-        <div className="Emerald_award_info">
-          <h4>Luxury Travel Influencer of the Year</h4>
-          <p>Recognized by Travel Leaders Network for 2024</p>
-        </div>
-      </div>
-      
-      <div className="Emerald_award_card">
-        <Star className="Emerald_award_icon" />
-        <div className="Emerald_award_info">
-          <h4>Most Influential Women in Travel</h4>
-          <p>Awarded by TravelPulse (2026)</p>
-        </div>
-      </div>
-
-      <div className="Emerald_award_card">
-        <Globe className="Emerald_award_icon" />
-        <div className="Emerald_award_info">
-          <h4>Global Industry Contributor</h4>
-          <p>Featured spokesperson in leading publications</p>
-        </div>
-      </div>
-    </div> */}
 
           <p className="Emerald_media_inquiry">
             <Quote size={12} className="Emerald_quote_icon" />
@@ -591,23 +543,3 @@ const AntaFAQ = ({ items }) => {
 };
 
 export default LuxuryPage;
-
-{
-  /* <section class="hero_section">
-        <div class="hero_main">
-          <p></p>
-          <p></p>
-          <p></p>
-          <button></button>
-          <button></button>
-        </div>
-       </section>
-
-
-       <section>
-        <div>
-          <h2></h2>
-          <p></p>
-        </div>
-       </section> */
-}
