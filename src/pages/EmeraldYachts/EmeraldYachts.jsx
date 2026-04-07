@@ -540,18 +540,18 @@ const AntaFAQ = ({ items }) => {
   const [open, setOpen] = useState(null);
 
   return (
-    <div className="anta_faq_list">
+    <div className="emerald_faq_list">
       {items.map((item, i) => (
         <div
           key={i}
-          className={`anta_faq_item ${open === i ? "anta_faq_item--open" : ""}`}
+          className={`emerald_faq_item ${open === i ? "emerald_faq_item--open" : ""}`}
           onClick={() => setOpen(open === i ? null : i)}
         >
-          <div className="anta_faq_question">
+          <div className="emerald_faq_question">
             <span>{item.q}</span>
-            <span className="anta_faq_icon">{open === i ? "−" : "+"}</span>
+            <span className="emerald_faq_icon">{open === i ? "−" : "+"}</span>
           </div>
-          {open === i && <p className="anta_faq_answer">{item.a}</p>}
+          {open === i && <p className="emerald_faq_answer">{item.a}</p>}
         </div>
       ))}
     </div>
