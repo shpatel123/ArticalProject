@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+
 // Code-split each page — only the visited page's JS is downloaded
 const EmeraldYachts         = lazy(() => import('./pages/EmeraldYachts/EmeraldYachts'))
 const DrakePassagePage      = lazy(() => import('./pages/DrakePassagePage/DrakePassagePage'))
@@ -9,6 +10,7 @@ const AntarcticaCruise      = lazy(() => import('./pages/AntarcticaCruise/Antarc
 const ScenicAntarctica      = lazy(() => import('./pages/ScenicAntarctica/ScenicAntarctica'))
 const ScenicvsEmeraldYachts = lazy(() => import('./pages/ScenicvsEmeraldYachts/ScenicvsEmeraldYachts'))
 const LuxuryTravel          = lazy(() => import('./pages/LuxuryTravel/LuxuryTravel'))
+const EmeraldAzzurraVsEmeraldSakara = lazy(() => import('./pages/EmeraldAzzurraVsEmeraldSakara/EmeraldAzzurraVsEmeraldSakara'))
 
 const PageLoader = () => (
   <div style={{
@@ -37,6 +39,7 @@ function App() {
           <Route path='/scenic-antarctica-cruise' element={<ScenicAntarctica />} />
           <Route path='/luxury-travel' element={<LuxuryTravel />} />
           <Route path='/ScenicvsEmeraldYachts' element={<ScenicvsEmeraldYachts />} />
+          <Route path='/EmeraldAzzurraVsEmeraldSakara' element={<EmeraldAzzurraVsEmeraldSakara />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

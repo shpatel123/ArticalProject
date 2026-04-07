@@ -18,21 +18,41 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo" onClick={() => navigate("/")} style={{ cursor: 'pointer' }}>TRIPS & SHIPS</div>
+      <div
+        className="logo"
+        onClick={() => navigate("/")}
+        style={{ cursor: "pointer" }}
+      >
+        TRIPS & SHIPS
+      </div>
 
       <div className="nav-links">
         <div className="nav-dropdown-wrapper">
-          <Link to="/" className="nav-dropdown-trigger">HOME <i className="fas fa-angle-down"></i></Link>
+          <Link to="/" className="nav-dropdown-trigger">
+            HOME <i className="fas fa-angle-down"></i>
+          </Link>
           <div className="nav-dropdown-menu">
             <div className="nav-dropdown-group">
               <span className="nav-dropdown-title">ANTARCTICA</span>
               <Link to="/antarctica-cruise-cost">Antarctica Cruise Cost</Link>
-              <Link to="/scenic-antarctica-cruise">Scenic Antarctica Cruises</Link>
-              <Link to="/scenic-vs-silversea-antarctica">Scenic vs Silversea Antarctica</Link>
+              <Link to="/scenic-antarctica-cruise">
+                Scenic Antarctica Cruises
+              </Link>
+              <Link to="/scenic-vs-silversea-antarctica">
+                Scenic vs Silversea Antarctica
+              </Link>
               <Link to="/ScenicvsEmeraldYachts">Scenic vs Emerald Yachts</Link>
               <Link to="/DrakePassagePage">The Drake Passage</Link>
             </div>
-            <Link to="/luxury-travel" className="nav-dropdown-single">LUXURY TRAVEL</Link>
+            <Link to="/luxury-travel" className="nav-dropdown-single">
+              LUXURY TRAVEL
+            </Link>
+            <Link
+              to="/EmeraldAzzurraVsEmeraldSakara"
+              className="nav-dropdown-single"
+            >
+              EMERALD AZZURRA VS EMERALD SAKARA
+            </Link>
           </div>
         </div>
         <a href="#">EXPERIENCES</a>
@@ -52,23 +72,52 @@ const Navbar = () => {
         <span></span>
         <span></span>
       </div>
-      
+
       <div className={`offcanvas-menu ${menuOpen ? "active" : ""}`}>
-        <div className="close-btn" onClick={toggleMenu}>×</div>
+        <div className="close-btn" onClick={toggleMenu}>
+          ×
+        </div>
 
         <div className="mobile-dropdown-wrapper">
           <div className="mobile-dropdown-trigger" onClick={toggleHomeDropdown}>
-            HOME <i className={`fas fa-angle-${homeDropdownOpen ? "up" : "down"}`}></i>
+            HOME{" "}
+            <i
+              className={`fas fa-angle-${homeDropdownOpen ? "up" : "down"}`}
+            ></i>
           </div>
-          <div className={`mobile-dropdown-menu ${homeDropdownOpen ? "active" : ""}`}>
+          <div
+            className={`mobile-dropdown-menu ${homeDropdownOpen ? "active" : ""}`}
+          >
             <span className="mobile-dropdown-title">ANTARCTICA</span>
-            <Link to="/antarctica-cruise-cost" onClick={toggleMenu}>Antarctica Cruise Cost</Link>
-            <Link to="/scenic-antarctica-cruise" onClick={toggleMenu}>Scenic Antarctica Cruises</Link>
-            <Link to="/scenic-vs-silversea-antarctica" onClick={toggleMenu}>Scenic vs Silversea Antarctica</Link>
-            <Link to="/ScenicvsEmeraldYachts" onClick={toggleMenu}>Scenic vs Emerald Yachts</Link>
-            <Link to="/DrakePassagePage" onClick={toggleMenu}>The Drake Passage</Link>
+            <Link to="/antarctica-cruise-cost" onClick={toggleMenu}>
+              Antarctica Cruise Cost
+            </Link>
+            <Link to="/scenic-antarctica-cruise" onClick={toggleMenu}>
+              Scenic Antarctica Cruises
+            </Link>
+            <Link to="/scenic-vs-silversea-antarctica" onClick={toggleMenu}>
+              Scenic vs Silversea Antarctica
+            </Link>
+            <Link to="/ScenicvsEmeraldYachts" onClick={toggleMenu}>
+              Scenic vs Emerald Yachts
+            </Link>
+            <Link to="/DrakePassagePage" onClick={toggleMenu}>
+              The Drake Passage
+            </Link>
             <span className="mobile-dropdown-divider"></span>
-            <Link to="/luxury-travel" onClick={toggleMenu} className="mobile-dropdown-single">LUXURY TRAVEL</Link>
+            <Link
+              to="/luxury-travel"
+              onClick={toggleMenu}
+              className="mobile-dropdown-single"
+            >
+              LUXURY TRAVEL
+            </Link>
+            <Link
+              to="/EmeraldAzzurraVsEmeraldSakara"
+              className="nav-dropdown-single"
+            >
+              EMERALD AZZURRA VS EMERALD SAKARA
+            </Link>
           </div>
         </div>
 
